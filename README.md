@@ -1,8 +1,8 @@
-Tax4Fun2
+Tax4Fun2: prediction of habitat-specific functional profiles and functional redundancy based on 16S rRNA gene sequences
 ---
 
-+ [Tax4Fun2](https://doi.org/10.1186/s40793-020-00358-7) was developed by Dr Bernd Wemheuer (the corresponding author). This is only a short tutorial on how Tax4Fun2 can be installed and executed.
-+ I am a former colleague of the Tax4Fun2 developers, this tutorial was prepared with the hope that it would be helpful. Suggestions on this tutorial can be posted on the [issue page](https://github.com/songweizhi/Tax4Fun2_short_tutorial/issues)
++ Tax4Fun2 was developed by Wemheuer et al. (2020) (https://doi.org/10.1186/s40793-020-00358-7). This is only a short tutorial on how Tax4Fun2 can be installed and executed for functional prediction.
++ I am a former colleague of the Tax4Fun2 developers, this tutorial was prepared with the hope that it would be helpful. Suggestions can be posted on the [issue page](https://github.com/songweizhi/Tax4Fun2_short_tutorial/issues).
 
 
 Installation
@@ -51,11 +51,17 @@ Making functional predictions using the default database
 Making functional predictions using the default database + a user-generated database
 ---
 
+#### Notes
+
 1. Please refer to Step 1 to generate your own database.
 1. You'll need to store your reference genomes/MAGs in a folder and provide full path to that folder to Tax4Fun2 with "pwd_user_data".
 1. You also need to specify a name to the to-be generated database with "name_user_data".
 1. Reference genomes/MAGs without 16S rRNA genes will be ignored in database building.
-1. (provide more details here, why this matters) You need to know the copy number of 16S rRNA genes in your reference genomes/MAGs, [MarkerMAG](https://github.com/songweizhi/MarkerMAG) might be able to help with this.
+1. For accurate functional profiling, you'll need to know the copy number of 16S rRNA genes in your own reference genomes/MAGs, especially if you specify `norm_by_cn=TRUE` in `makeFunctionalPrediction()`.
+1. Considering the above two points, [MarkerMAG](https://github.com/songweizhi/MarkerMAG) might be able to help in 
+   + Assigning 16S rRNA genes to MAGs
+   + Estimating the copy number of 16S rRNA genes in MAGs
+
 
 #### Step 1: generate your own reference database
 
