@@ -8,6 +8,11 @@ Tax4Fun2
 Installation
 ---
 
+### Download
++ Source code: [Tax4Fun2_1.1.5.tar.gz](https://zenodo.org/records/10035668)
++ Database file: [Tax4Fun2_ReferenceData_v2.tar.gz](https://zenodo.org/records/10035668)
++ Example input files: [example_input_files](https://github.com/songweizhi/Tax4Fun2_short_tutorial/tree/master/example_input_files)
+
 ### In Rstudio
 
 + open RStudio > Tools > install packages > from "Install from" select "Package Archive File" > choose "Tax4Fun2_1.1.5.tar.gz" > click "Install"
@@ -15,7 +20,7 @@ Installation
 ### In Terminal
 
     R
-    install.packages(pkgs = "Tax4Fun2_1.1.5.tar.gz", repos = NULL, source = TRUE)
+    install.packages(pkgs="Tax4Fun2_1.1.5.tar.gz", repos=NULL, source=TRUE)
 
 ### Database file 
 
@@ -28,7 +33,7 @@ Making functional predictions using the default database
 
     library(Tax4Fun2)
 
-    # modify the following 8 lines
+    # modify the following 8 lines as needed
     query_otu_seq   = 'demo_OTU.fasta'              # input OTU sequence file
     query_otu_table = 'demo_OTU_table.csv'          # input OTU table
     pwd_op_folder   = 'Tax4Fun2_output_folder'      # output directory
@@ -56,11 +61,11 @@ Making functional predictions using the default database + a user-generated data
 
     library(Tax4Fun2)
 
-    # modify the following 4 lines
-    pwd_ref_data    = 'Tax4Fun2_ReferenceData_v2'   # path to Tax4Fun2's default database, need to be decompressed before use
-    pwd_user_data   = 'genome_folder'               # path to the folder that holds the reference genome/MAG files
-    name_user_data  = 'name_of_user_database'       # specify the name of the generated database, specify only the name, do not include path here!
-    gnm_ext         = 'fna'                         # extension of the genome files
+    # modify the following 4 lines as needed
+    pwd_ref_data   = 'Tax4Fun2_ReferenceData_v2'   # path to Tax4Fun2's default database, need to be decompressed before use
+    pwd_user_data  = 'genome_folder'               # path to the folder that holds the reference genome/MAG files
+    name_user_data = 'name_of_user_database'       # specify the name of the generated database, specify only the name, do not include path here!
+    gnm_ext        = 'fna'                         # extension of the genome files
     
     # Generate your own database
     extractSSU(genome_folder = pwd_user_data, file_extension = gnm_ext, path_to_reference_data = pwd_ref_data)
@@ -71,7 +76,7 @@ Making functional predictions using the default database + a user-generated data
     
     library(Tax4Fun2)
 
-    # modify the following 10 lines
+    # modify the following 10 lines as needed
     query_otu_seq   = 'demo_OTU.fasta'              # input OTU sequence file
     query_otu_table = 'demo_OTU_table.csv'          # input OTU table
     pwd_op_folder   = 'Tax4Fun2_output_folder'      # output directory
