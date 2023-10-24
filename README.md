@@ -8,21 +8,21 @@ Tax4Fun2
 Installation
 ---
 
-### Download
+#### Download
 + Source code: [Tax4Fun2_1.1.5.tar.gz](https://zenodo.org/records/10035668)
 + Database file: [Tax4Fun2_ReferenceData_v2.tar.gz](https://zenodo.org/records/10035668)
 + Example input files: [example_input_files](https://github.com/songweizhi/Tax4Fun2_short_tutorial/tree/master/example_input_files)
 
-### In Rstudio
+#### In Rstudio
 
 + open RStudio > Tools > install packages > from "Install from" select "Package Archive File" > choose "Tax4Fun2_1.1.5.tar.gz" > click "Install"
 
-### In Terminal
+#### In Terminal
 
     R
     install.packages(pkgs="Tax4Fun2_1.1.5.tar.gz", repos=NULL, source=TRUE)
 
-### Database file 
+#### Database file 
 
 + You'll need to have Tax4Fun2's default database (Tax4Fun2_ReferenceData_v2.tar.gz) to perform functional prediction. 
 + Before it can be used, you'll need to decompress it: `tar xzvf Tax4Fun2_ReferenceData_v2.tar.gz`
@@ -57,7 +57,7 @@ Making functional predictions using the default database + a user-generated data
 1. Reference genomes/MAGs without 16S rRNA genes will be ignored in database building.
 1. (provide more details here, why this matters) You need to know the copy number of 16S rRNA genes in your reference genomes/MAGs, [MarkerMAG](https://github.com/songweizhi/MarkerMAG) might be able to help with this.
 
-### Step 1: generate your own reference database
+#### Step 1: generate your own reference database
 
     library(Tax4Fun2)
 
@@ -72,7 +72,7 @@ Making functional predictions using the default database + a user-generated data
     assignFunction(genome_folder = pwd_user_data, file_extension = gnm_ext, path_to_reference_data = pwd_ref_data, num_of_threads = num_threads, fast = TRUE)
     generateUserData(path_to_reference_data = pwd_ref_data, path_to_user_data = pwd_user_data, name_of_user_data = name_user_data, SSU_file_extension = "_16SrRNA.ffn", KEGG_file_extension = "_funPro.txt")
 
-### Step 2: perform functional predictions
+#### Step 2: perform functional predictions
     
     library(Tax4Fun2)
 
