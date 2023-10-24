@@ -1,12 +1,7 @@
 
 # Tax4Fun2 was developed by Dr Bernd Wemheuer (the corresponding author).
-
 # This is only a short script showing how it can be installed and executed for functional prediction.
-
-
-Franziska Wemheuer, Jessica A. Taylor, Rolf Daniel, Emma Johnston, Peter Meinicke, Torsten Thomas & Bernd Wemheuer 
-
-https://doi.org/10.1186/s40793-020-00358-7
+# https://doi.org/10.1186/s40793-020-00358-7
 
 #######################################################################################################################
 ############################################## Section 1: setup Tax4Fun2 ##############################################
