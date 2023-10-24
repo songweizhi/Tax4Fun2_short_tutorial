@@ -2,7 +2,7 @@ Tax4Fun2
 ---
 
 + [Tax4Fun2](https://doi.org/10.1186/s40793-020-00358-7) was developed by Dr Bernd Wemheuer (the corresponding author). This is only a short tutorial on how Tax4Fun2 can be installed and executed.
-+ This tutorial was prepared by me, a former colleague of the Tax4Fun2 developers, with the hope that it would be helpful.
++ I am a former colleague of the Tax4Fun2 developers, this tutorial was prepared with the hope that it would be helpful.
 + Suggestions on this tutorial can be posted on the [issue page](https://github.com/songweizhi/Tax4Fun2_short_tutorial/issues)
 
 
@@ -30,7 +30,7 @@ Making functional predictions using the default database
     iden            = 0.97                          # min_identity_to_reference, please modify as needed
     num_of_threads  = 6                             # number of CPU cores to use, please modify as needed
 
-    # Run Tax4Fun2
+    # predict functions
     runRefBlast(path_to_otus = query_otu_seq, path_to_reference_data = pwd_ref_data, path_to_temp_folder = pwd_op_folder, database_mode = "Ref99NR", use_force = T, num_threads = num_of_threads)
     makeFunctionalPrediction(path_to_otu_table = query_otu_table, path_to_reference_data = pwd_ref_data, path_to_temp_folder = pwd_op_folder, database_mode = "Ref99NR", normalize_by_copy_number = norm_by_cn, min_identity_to_reference = iden, normalize_pathways = norm_path)
 
@@ -74,6 +74,6 @@ Making functional predictions using the default database + a user-generated data
     iden            = 0.97                          # min_identity_to_reference, please modify as needed
     num_of_threads  = 6                             # number of CPU cores to use , please modify as needed
     
-    # Run Tax4Fun2 with your data included
+    # predict functions
     runRefBlast(path_to_otus = query_otu_seq, path_to_reference_data = pwd_ref_data, path_to_temp_folder = pwd_op_folder, database_mode = "Ref99NR", use_force = T, num_threads = num_of_threads, include_user_data = T, path_to_user_data = pwd_user_data, name_of_user_data = name_user_data)
     makeFunctionalPrediction(path_to_otu_table = query_otu_table, path_to_reference_data = pwd_ref_data, path_to_temp_folder = pwd_op_folder, database_mode = "Ref99NR", normalize_by_copy_number = norm_by_cn, min_identity_to_reference = iden, normalize_pathways = norm_path, include_user_data = T, path_to_user_data = pwd_user_data, name_of_user_data = name_user_data)
