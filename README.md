@@ -2,17 +2,25 @@ Tax4Fun2
 ---
 
 + [Tax4Fun2](https://doi.org/10.1186/s40793-020-00358-7) was developed by Dr Bernd Wemheuer (the corresponding author). This is only a short tutorial on how Tax4Fun2 can be installed and executed.
-+ I am a former colleague of the Tax4Fun2 developers, this tutorial was prepared with the hope that it would be helpful.
-+ Suggestions on this tutorial can be posted on the [issue page](https://github.com/songweizhi/Tax4Fun2_short_tutorial/issues)
++ I am a former colleague of the Tax4Fun2 developers, this tutorial was prepared with the hope that it would be helpful. Suggestions on this tutorial can be posted on the [issue page](https://github.com/songweizhi/Tax4Fun2_short_tutorial/issues)
 
 
 Installation
 ---
 
-1. Go to RStudio > Tools > install packages
-1. from "Install from" select "Package Archive File"
-1. choose Tax4Fun2_1.1.5.tar.gz, then click "Install"
-1. You'll need to have Tax4Fun2's default database (Tax4Fun2_ReferenceData_v2.tar.gz) to perform functional prediction. Before it can be used, you'll need to decompress it.
+### In Rstudio
+
++ open RStudio > Tools > install packages > from "Install from" select "Package Archive File" > choose "Tax4Fun2_1.1.5.tar.gz" > click "Install"
+
+### In Terminal
+
+    R
+    install.packages(pkgs = "Tax4Fun2_1.1.5.tar.gz", repos = NULL, source = TRUE)
+
+### Database file 
+
++ You'll need to have Tax4Fun2's default database (Tax4Fun2_ReferenceData_v2.tar.gz) to perform functional prediction. 
++ Before it can be used, you'll need to decompress it: `tar xzvf Tax4Fun2_ReferenceData_v2.tar.gz`
 
 
 Making functional predictions using the default database
@@ -21,10 +29,10 @@ Making functional predictions using the default database
     library(Tax4Fun2)
 
     # modify the following 8 lines
-    pwd_op_folder   = 'Tax4Fun2_output_folder'      # specify output folder
-    query_otu_seq   = 'demo_OTU.fasta'              # OTU sequence file
-    query_otu_table = 'demo_OTU_table.csv'          # OTU table
-    pwd_ref_data    = 'Tax4Fun2_ReferenceData_v2'   # path to Tax4Fun2's default database (i.e., Tax4Fun2_ReferenceData_v2), need to be decompressed before use
+    query_otu_seq   = 'demo_OTU.fasta'              # input OTU sequence file
+    query_otu_table = 'demo_OTU_table.csv'          # input OTU table
+    pwd_op_folder   = 'Tax4Fun2_output_folder'      # output directory
+    pwd_ref_data    = 'Tax4Fun2_ReferenceData_v2'   # path to the default database (i.e., Tax4Fun2_ReferenceData_v2), need to be decompressed before use
     norm_by_cn      = TRUE                          # normalize_by_copy_number (TRUE or FALSE)
     norm_path       = TRUE                          # normalize_pathways (TRUE or FALSE)
     iden            = 0.97                          # min_identity_to_reference, please modify as needed
@@ -64,11 +72,12 @@ Making functional predictions using the default database + a user-generated data
     library(Tax4Fun2)
 
     # modify the following 10 lines
+    query_otu_seq   = 'demo_OTU.fasta'              # input OTU sequence file
+    query_otu_table = 'demo_OTU_table.csv'          # input OTU table
+    pwd_op_folder   = 'Tax4Fun2_output_folder'      # output directory
     pwd_ref_data    = 'Tax4Fun2_ReferenceData_v2'   # need to be the same as in step 1
     pwd_user_data   = 'genome_folder'               # need to be the same as in step 1
-    name_user_data  = 'name_of_user_database'       # need to be the same as in step 1, specify only the name, do not include path herepwd_op_folder   = 'Tax4Fun2_output_folder'      # specify output folder
-    query_otu_seq   = 'demo_OTU.fasta'              # OTU sequence file
-    query_otu_table = 'demo_OTU_table.csv'          # OTU table
+    name_user_data  = 'name_of_user_database'       # need to be the same as in step 1, specify only the name, do not include path here
     norm_by_cn      = TRUE                          # normalize_by_copy_number (TRUE or FALSE)
     norm_path       = TRUE                          # normalize_pathways (TRUE or FALSE)
     iden            = 0.97                          # min_identity_to_reference, please modify as needed
