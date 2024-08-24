@@ -3,7 +3,7 @@ A short tutorial on Tax4Fun2
 ---
 
 + Tax4Fun2 was developed by Wemheuer et al. (2020) (https://doi.org/10.1186/s40793-020-00358-7). This is only a short tutorial on how it could be used for functional prediction.
-+ I am a former colleague of the Tax4Fun2 developers, this tutorial was prepared with the hope that it would be helpful. 
++ I am a former colleague of the Tax4Fun2 developers, this tutorial was prepared with the hope that it might be helpful. 
 + Error reports and suggestions can be posted on the [issue page](https://github.com/songweizhi/Tax4Fun2_short_tutorial/issues).
 
 Installation
