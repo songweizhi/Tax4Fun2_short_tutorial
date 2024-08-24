@@ -12,6 +12,10 @@ Installation
 #### Files needed
 + Source code: [Tax4Fun2_1.1.5.tar.gz](https://zenodo.org/records/10035668)
 + Database file: [Tax4Fun2_ReferenceData_v2.tar.gz](https://zenodo.org/records/10035668)
+
+      # You'll need to decompress it before performing functional prediction
+      $ tar xzvf Tax4Fun2_ReferenceData_v2.tar.gz
+
 + Example input files: [example_input_files](https://github.com/songweizhi/Tax4Fun2_short_tutorial/tree/master/example_input_files)
 
 #### In Rstudio
@@ -24,12 +28,6 @@ Installation
     $ install.packages(pkgs="Tax4Fun2_1.1.5.tar.gz", repos=NULL, source=TRUE)
 
 + If you're running Tax4Fun2 on **Windows**, you might found [this](https://github.com/songweizhi/Tax4Fun2_short_tutorial/issues/2) helpful.
-
-#### Database file 
-
-+ You'll need to download and decompress Tax4Fun2's default database ([Tax4Fun2_ReferenceData_v2.tar.gz](https://zenodo.org/records/10035668)) to perform functional prediction.
-
-      tar xzvf Tax4Fun2_ReferenceData_v2.tar.gz
 
 Example commands
 ---
